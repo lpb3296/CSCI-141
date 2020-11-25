@@ -2,6 +2,7 @@
 # CSCI-141: Lab01
 # Turtle Scenary
 import turtle
+import math
 
 """
 make a maple tree with user inputer size and color
@@ -39,15 +40,31 @@ def pine_tree(trunk, color):
     turtle.right(90)
     turtle.forward(trunk)
     turtle.left(90)
-    turtle.done()
 
 def house(color):
-    return None
+    angle = math.sqrt(100)
+    turtle.color(color)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(100)
+    turtle.left(45)
+    turtle.forward(71)
+    turtle.left(90)
+    turtle.forward(71)
+    turtle.left(45)
+    turtle.forward(100)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(100)
+    turtle.up()
+    turtle.done()
+
 
 def main():
-    trunk = int(input('enter a trunk size: '))
+    # trunk = int(input('enter a trunk size: '))
     color = input('please enter a color: ')
-    pine_tree(trunk, color)
-
+    # pine_tree(trunk, color)
+    house(color)
 
 main()
