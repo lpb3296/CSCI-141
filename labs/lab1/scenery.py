@@ -41,6 +41,9 @@ def pine_tree(trunk, color):
     turtle.left(90)
     turtle.done()
 
+def house(color):
+    return None
+
 def main():
     trunk = int(input('enter a trunk size: '))
     color = input('please enter a color: ')
