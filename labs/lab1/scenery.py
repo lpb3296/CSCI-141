@@ -57,6 +57,7 @@ def build_house(color):
     turtle.left(90)
     turtle.forward(50)
     turtle.up()
+    turtle.down()
 
 def init():
     turtle.up()
