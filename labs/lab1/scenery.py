@@ -41,8 +41,8 @@ def pine_tree(trunk, color):
     turtle.forward(trunk)
     turtle.left(90)
 
-def house(color):
-    angle = math.sqrt(100)
+def build_house(color):
+
     turtle.color(color)
     turtle.forward(50)
     turtle.left(90)
@@ -55,16 +55,28 @@ def house(color):
     turtle.forward(100)
     turtle.left(90)
     turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(100)
     turtle.up()
-    turtle.done()
 
 
 def main():
-    # trunk = int(input('enter a trunk size: '))
-    color = input('please enter a color: ')
-    # pine_tree(trunk, color)
-    house(color)
+    house = input('would you like a house (y/n): ')
+    pos = int(input('at which position (1/2/3)?: '))
+    color = input('what color?: ')
+    turtle.setworldcoordinates(-500, -500, 500, 0)
+
+    if pos == 1:
+        turtle.up()
+        turtle.goto(-400, -400)
+        turtle.down()
+    if pos == 2:
+        turtle.up()
+        turtle.goto(0, -400)
+        turtle.down()
+    if pos == 3:
+        turtle.up()
+        turtle.goto(400, -400)
+
+    if house == 'y':
+        build_house(color)
 
 main()
