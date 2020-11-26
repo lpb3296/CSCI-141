@@ -42,31 +42,36 @@ def rec_bowtie1(len):
 
     bowtie(len/2)
 
-    turtle.goto(0,0)
-    turtle.right(30)
+    turtle.left(30)
+    turtle.back(len*2)
+    turtle.right(60)
     turtle.forward(len*2)
     turtle.left(30)
     turtle.down()
 
     bowtie(len/2)
 
-    turtle.goto(0,0)
-    turtle.left(150)
+    turtle.right(30)
+    turtle.back(len*2)
+    turtle.left(180)
     turtle.forward(len*2)
     turtle.right(150)
     turtle.down()
 
     bowtie(len/2)
 
-    turtle.goto(0,0)
-    turtle.right(150)
+    turtle.right(30)
+    turtle.forward(len*2)
+    turtle.right(120)
     turtle.forward(len*2)
     turtle.left(150)
     turtle.down()
 
     bowtie(len/2)
 
-    turtle.goto(0,0)
+    turtle.left(30)
+    turtle.forward(len*2)
+    turtle.right(30)
 
 def main():
     len = int(input('please enter a length: '))
