@@ -50,6 +50,24 @@ def rec_bowtie1(len):
 
     bowtie(len/2)
 
+    turtle.goto(0,0)
+    turtle.left(150)
+    turtle.forward(len*2)
+    turtle.right(150)
+    turtle.down()
+
+    bowtie(len/2)
+
+    turtle.goto(0,0)
+    turtle.right(150)
+    turtle.forward(len*2)
+    turtle.left(150)
+    turtle.down()
+
+    bowtie(len/2)
+
+    turtle.goto(0,0)
+
 def main():
     len = int(input('please enter a length: '))
     rec_bowtie1(len)
