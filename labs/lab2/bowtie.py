@@ -4,7 +4,7 @@
 
 import turtle
 
-def bow_tie(len):
+def bowtie(len):
     turtle.right(30)
     turtle.color('blue')
     turtle.forward(len)
@@ -30,10 +30,28 @@ def bow_tie(len):
 
     turtle.right(90)
     turtle.back(len/4)
-    turtle.done()
+    turtle.up()
+
+def rec_bowtie1(len):
+    bowtie(len)
+
+    turtle.left(30)
+    turtle.forward(len*2)
+    turtle.right(30)
+    turtle.down()
+
+    bowtie(len/2)
+
+    turtle.goto(0,0)
+    turtle.right(30)
+    turtle.forward(len*2)
+    turtle.left(30)
+    turtle.down()
+
+    bowtie(len/2)
 
 def main():
     len = int(input('please enter a length: '))
-    bow_tie(len)
+    rec_bowtie1(len)
 
 main()
