@@ -44,6 +44,7 @@ def pine_tree(trunk, color):
 def build_house(color):
 
     turtle.color(color)
+    turtle.down()
     turtle.forward(50)
     turtle.left(90)
     turtle.forward(100)
@@ -57,22 +58,58 @@ def build_house(color):
     turtle.forward(50)
     turtle.up()
 
+def init():
+    turtle.up()
+    turtle.goto(-500, -400)
+    turtle.down()
+    turtle.color('green')
+    turtle.forward(1000)
+    turtle.up()
+    turtle.goto(0, 0)
 
 def main():
     house = input('would you like a house (y/n): ')
     pos = int(input('at which position (1/2/3)?: '))
     color = input('what color?: ')
+
     turtle.setworldcoordinates(-500, -500, 500, 0)
+    init()
 
     if pos == 1:
         turtle.up()
+        turtle.goto(0, -400)
+        pine_tree(100, 'green')
+
+        turtle.up()
+        turtle.goto(400, -400)
+        maple_tree(100, 'green')
+
+        turtle.up()
         turtle.goto(-400, -400)
         turtle.down()
+
     if pos == 2:
+        turtle.up()
+        turtle.goto(-400, -400)
+        pine_tree(100, 'green')
+
+        turtle.up()
+        turtle.goto(400, -400)
+        maple_tree(100, 'green')
+
         turtle.up()
         turtle.goto(0, -400)
         turtle.down()
+
     if pos == 3:
+        turtle.up()
+        turtle.goto(-400, -400)
+        pine_tree(100, 'green')
+
+        turtle.up()
+        turtle.goto(0, -400)
+        maple_tree(100, 'green')
+
         turtle.up()
         turtle.goto(400, -400)
 
