@@ -5,121 +5,91 @@
 import turtle
 
 def bowtie(len):
-    turtle.right(30)
+    turtle.speed(10)
     turtle.color('blue')
+    turtle.down()
+
+    turtle.right(30)
     turtle.forward(len)
+
     turtle.left(120)
     turtle.forward(len)
+
     turtle.left(120)
     turtle.forward(len*2)
+
     turtle.right(120)
     turtle.forward(len)
+
     turtle.right(120)
     turtle.forward(len)
+
     turtle.left(30)
 
     turtle.up()
-    turtle.forward(len/4)
+    turtle.forward(len/3)
     turtle.left(90)
-    turtle.down()
 
+    turtle.down()
     turtle.color('red')
     turtle.begin_fill()
-    turtle.circle(len/4)
+    turtle.circle(len/3)
     turtle.end_fill()
     turtle.up()
 
     turtle.right(90)
-    turtle.back(len/4)
+    turtle.back(len/3)
 
 def rec_bowtie1(len, depth):
     if depth > 0:
-        turtle.speed(0)
-        print('depth = ' + str(depth))
         bowtie(len)
 
         turtle.up()
-        turtle.left(30)
-        turtle.forward(len*2.5)
-        turtle.down()
-
-        rec_bowtie1(len/2, depth-1)
-
-        turtle.up()
-        turtle.back(len*2.5)
-        turtle.right(60)
-        turtle.forward(len*2.5)
-        turtle.down()
-
-        rec_bowtie1(len/2, depth-1)
-
-        turtle.up()
-        turtle.back(len*2.5)
-        turtle.left(180)
-        turtle.forward(len*2.5)
-        turtle.down()
-
-        rec_bowtie1(len/2, depth-1)
-
-        turtle.up()
-        turtle.forward(len*2.5)
-        turtle.right(120)
-        turtle.forward(len*2.5)
-        turtle.down()
-
-        rec_bowtie1(len/2, depth-1)
-
-        turtle.up()
-        turtle.left(30)
-        turtle.forward(len*2.5)
         turtle.right(30)
+        turtle.forward(len*2)
         turtle.down()
+
+        rec_bowtie1(len/3, depth-1)
+
+        turtle.up()
+        turtle.back(len*2)
+        turtle.left(30)
+
+        turtle.left(30)
+        turtle.forward(len*2)
         turtle.down()
 
+        rec_bowtie1(len/3, depth-1)
 
+        turtle.up()
+        turtle.back(len*2)
+        turtle.right(60)
 
-# def rec_bowtie2(len):
-#     turtle.speed(0)
-#     bowtie(len)
-#
-#     turtle.left(30)
-#     turtle.forward(len * 2.5)
-#     turtle.right(30)
-#     turtle.down()
-#
-#     rec_bowtie1(len/2)
-#
-#     turtle.left(30)
-#     turtle.back(len * 2.5)
-#     turtle.right(60)
-#     turtle.forward(len * 2.5)
-#     turtle.left(30)
-#     turtle.down()
-#
-#     rec_bowtie1(len/2)
-#
-#     turtle.right(30)
-#     turtle.back(len * 2.5)
-#     turtle.left(180)
-#     turtle.forward(len * 2.5)
-#     turtle.right(150)
-#     turtle.down()
-#
-#     rec_bowtie1(len/2)
-#
-#     turtle.right(30)
-#     turtle.forward(len*2.5)
-#     turtle.right(120)
-#     turtle.forward(len*2.5)
-#     turtle.left(150)
-#     turtle.down()
-#
-#     rec_bowtie1(len/2)
-#     turtle.done()
+        turtle.back(len*2)
+        turtle.down()
+
+        rec_bowtie1(len/3, depth-1)
+
+        turtle.up()
+        turtle.forward(len*2)
+        turtle.left(30)
+
+        turtle.left(30)
+        turtle.back(len*2)
+        turtle.down()
+
+        rec_bowtie1(len/3, depth-1)
+
+        turtle.up()
+        turtle.forward(len*2)
+        turtle.right(30)
 
 
 def main():
     len = int(input('please enter a length: '))
-    rec_bowtie1(len, 2)
+    depth = int(input('please enter a depth: '))
+    turtle.setworldcoordinates(-1000, -1000, 1000, 1000)
+    rec_bowtie1(len, depth)
+    turtle.done()
 
 main()
